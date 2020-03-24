@@ -2414,7 +2414,7 @@ static int kinetis_probe_chip(struct kinetis_chip *k_chip)
 				k_chip->pflash_sector_size = 2<<10;
 				k_chip->max_flash_prog_size = 1<<9;
 				num_blocks = 2;
-				k_chip->flash_support = FS_PROGRAM_PHRASE | FS_PROGRAM_SECTOR;
+				k_chip->flash_support = FS_PROGRAM_LONGWORD;
 				k_chip->cache_type = KINETIS_CACHE_L;
 				cpu_mhz = 48;
 				snprintf(name, sizeof(name), "MKE%u%uZ%%s%u",
