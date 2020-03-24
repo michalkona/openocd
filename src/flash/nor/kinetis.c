@@ -2410,8 +2410,8 @@ static int kinetis_probe_chip(struct kinetis_chip *k_chip)
 					 familyid, subfamid, cpu_mhz / 10);
 				break;
 			case (KINETIS_SDID_FAMILYID_K1X | KINETIS_SDID_SUBFAMID_KX6 | KINETIS_SDID_PRIJECTID_KE1xZ64):
-				/* KE1xZ: FTFA, 2kB sectors */
-				k_chip->pflash_sector_size = 2<<10;
+				/* KE1xZ: FTFA, 1kB sectors */
+				k_chip->pflash_sector_size = 1<<10;
 				num_blocks = 1;
 				k_chip->flash_support = FS_PROGRAM_LONGWORD;
 				k_chip->cache_type = KINETIS_CACHE_L;
